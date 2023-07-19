@@ -73,7 +73,7 @@ export default function TextForm(Props) {
           {text.split(" ").filter((element)=>{ return element.length!==0}).length} words and {text.length} Charecters
         </p>
         <p className={`  text-${
-          Props.mode === "dark" ? "light" : "dark"} `}>{0.008 * text.split(" ").length} Minutes to read</p>
+          Props.mode === "dark" ? "light" : "dark"} `}>{0.008 * text.split(" ").filter((element)=>{ return element.length!==0}).length} Minutes to read</p>
         <h3 className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>Preview</h3>
         <p className={`  text-${
