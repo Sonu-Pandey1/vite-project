@@ -48,16 +48,16 @@ export default function TextForm(Props) {
             value={text}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={onclickHandller1}>
+        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller1}>
           convert to upper case
         </button>
-        <button className="btn btn-primary mx-2" onClick={onclickHandller2}>
+        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller2}>
           convert to lower case
         </button>
-        <button className="btn btn-primary mx-2" onClick={onclickHandller3}>
+        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller3}>
           Clear textarea
         </button>
-        <button className="btn btn-primary mx-2" onClick={onclickHandller4}>
+        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller4}>
           copy text
         </button>
         {/* <button className="btn btn-primary mx-2" onClick={onclickHandller3}> */}
@@ -70,7 +70,7 @@ export default function TextForm(Props) {
           Props.mode === "dark" ? "light" : "dark"} `}>Your Text Summery</h2>
         <p className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>
-          {text.split(" ").length} words and {text.length} Charecters
+          {text.split(" ").filter((element)=>{ return element.length!==0}).length} words and {text.length} Charecters
         </p>
         <p className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>{0.008 * text.split(" ").length} Minutes to read</p>
