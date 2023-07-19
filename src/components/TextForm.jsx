@@ -36,7 +36,7 @@ export default function TextForm(Props) {
         <h1 className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>{Props.heading}</h1>
         <div className="mb-3">
-          <textarea style={{backgroundColor:Props.mode==="dark"?"gray":"white"}} className={`form-control  text-${
+          <textarea style={{backgroundColor:Props.mode==="dark"?"#13466e":"white"}} className={`form-control  text-${
           Props.mode === "dark" ? "light" : "dark"} 
           `}
             onChange={(e) => {
@@ -48,16 +48,16 @@ export default function TextForm(Props) {
             value={text}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller1}>
+        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller1}>
           convert to upper case
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller2}>
+        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller2}>
           convert to lower case
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller3}>
+        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller3}>
           Clear textarea
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={onclickHandller4}>
+        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller4}>
           copy text
         </button>
         {/* <button className="btn btn-primary mx-2" onClick={onclickHandller3}> */}
