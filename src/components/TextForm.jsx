@@ -48,16 +48,16 @@ export default function TextForm(Props) {
             value={text}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller1}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller1}>
           convert to upper case
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller2}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller2}>
           convert to lower case
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller3}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller3}>
           Clear textarea
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={onclickHandller4}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller4}>
           copy text
         </button>
         {/* <button className="btn btn-primary mx-2" onClick={onclickHandller3}> */}
@@ -70,14 +70,14 @@ export default function TextForm(Props) {
           Props.mode === "dark" ? "light" : "dark"} `}>Your Text Summery</h2>
         <p className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>
-          {text.split(" ").filter((element)=>{ return element.length!==0}).length} words and {text.length} Charecters
+          {text.split(/\s+/).filter((element)=>{ return element.length!==0}).length} words and {text.length} Charecters
         </p>
         <p className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>{0.008 * text.split(" ").filter((element)=>{ return element.length!==0}).length} Minutes to read</p>
         <h3 className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>Preview</h3>
         <p className={`  text-${
-          Props.mode === "dark" ? "light" : "dark"} `}>{text.length<=0?"enter in textarea to preview :- ":text}</p>
+          Props.mode === "dark" ? "light" : "dark"} `}>{text.length<=0?"Nothing  to preview :- ":text}</p>
       </div>
     </>
   );
