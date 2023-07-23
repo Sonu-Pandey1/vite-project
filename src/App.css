@@ -41,16 +41,27 @@
   color: #888;
 } */
 
+*{
+  text-transform: capitalize;
+}
 h1{
   text-align: center;
 }
 
 .active{
-  background-color: rgb(48, 196, 242);
+  /* background-color: rgb(73, 126, 249); */
+  background-image: linear-gradient(to right, rgba(219, 32, 197, 0.3), rgba(41, 31, 220, 0.4));
   color: rgb(88, 17, 239);
-   border-radius: 20px;
+   border-radius: 16px;
+   transition: all 0.4s ease-in-out;
+   
   
 }
 .navlink{
   text-decoration: unset;
+}
+
+#oo{
+  background-image: linear-gradient(to right, rgba(219, 32, 197, 0.3), rgba(41, 31, 220, 0.4));
+
 }

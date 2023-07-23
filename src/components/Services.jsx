@@ -5,10 +5,10 @@ export default function About(Props) {
   return (
     <div>
       <h1 className={` mt-4 text-${
-          Props.mode === "dark" ? "light" : "dark"} `}>About Page</h1>
+          Props.mode === "dark" ? "light" : "dark"} `}>Service Page</h1>
       <p className={`  text-${
           Props.mode === "dark" ? "light" : "dark"} `}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque iste quas dignissimos cumque quod sunt corrupti, unde et harum earum consequatur aspernatur! Magnam assumenda nulla earum veniam, vitae consequatur. Aspernatur.</p><br />
-    <button onClick={()=>{navigate("/")}}  className=" btn btn-outline-primary mt-5"> Go to Home Page</button>
+    <button onClick={()=>{navigate("/login")}}  className=" btn btn-outline-primary mt-5"> Go to Login Page</button>
     </div>
   )
 }

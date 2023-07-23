@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 export default function Alert(props) {
-    console.log(props)
+    // console.log(props)
     return (
             <div style={{height:"37px"}}>
                 { props.msg && <div

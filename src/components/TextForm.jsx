@@ -1,18 +1,18 @@
 // import React from "react";
 import { useState } from "react";
-import "../index.css";
+import "../App.css"
 
 export default function TextForm(Props) {
-  console.log(Props)
+  // console.log(Props)
   const [text, setText] = useState("");
 
   function onclickHandller1() {
     setText(text.toUpperCase());
-    Props.alert("Converted to UpperCase","success")
+    Props.alert("Converted To UpperCase","success")
   }
   function onclickHandller2() {
     setText(text.toLowerCase());
-    Props.alert("Converted to LowerCase","success")
+    Props.alert("Converted To LowerCase","success")
   }
   function onclickHandller3() {
     setText("");
@@ -26,7 +26,7 @@ export default function TextForm(Props) {
      text.select();
     // text.select();
     navigator.clipboard.writeText(text.value)
-    Props.alert("Copy to Clipbord","success")
+    Props.alert("Copy To Clipbord","success")
 
   }
 
@@ -48,16 +48,16 @@ export default function TextForm(Props) {
             value={text}
           ></textarea>
         </div>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller1}>
+        <button disabled={text.length===0} id="oo" className="btn btn-primary mx-2 my-1" onClick={onclickHandller1}>
           convert to upper case
         </button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller2}>
+        <button disabled={text.length===0} id="oo" className="btn btn-primary mx-2 my-1" onClick={onclickHandller2}>
           convert to lower case
         </button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller3}>
+        <button disabled={text.length===0} id="oo" className="btn btn-primary mx-2 my-1" onClick={onclickHandller3}>
           Clear textarea
         </button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={onclickHandller4}>
+        <button disabled={text.length===0} id="oo" className="btn btn-primary mx-2 my-1" onClick={onclickHandller4}>
           copy text
         </button>
         {/* <button className="btn btn-primary mx-2" onClick={onclickHandller3}> */}

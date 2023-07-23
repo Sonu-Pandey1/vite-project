@@ -7,6 +7,11 @@ import TextForm from './components/TextForm'
 import Alert from './components/Alert'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import About from './components/About'
+import Login from './components/Login'
+import Services from './components/Services'
+import Contact from './components/Contact'
+import Signup from './components/Signup'
+import Forgetpassword from './components/Forgetpassword'
 
 function App() {
   const [mode, setMode] = useState("light")
@@ -28,6 +33,8 @@ function App() {
       setMode("dark")
       document.body.style.backgroundColor="#042743"
       showAlert("dark mode has been enabled","success")
+  
+
     }
     else{
       setMode("light")
@@ -36,7 +43,7 @@ function App() {
 
 
     }
-   
+
  
   }
 
@@ -48,43 +55,21 @@ function App() {
 
     <Routes>
       {/* <Route path='/' element={<h1>home</h1>}/> */}
-      <Route path='/' element={<TextForm alert={showAlert} mode={mode} toggle={switchToggle} heading={"Enter the text to analyze below"}/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/services' element={<h1>Services page</h1>}/>
-      <Route path='/contact' element={<h1>Contact -Us page</h1>}/>
-      <Route path='/*' element={<Navigate to={"/"}/>}/>
+      <Route path='/home' element={<TextForm alert={showAlert} mode={mode} toggle={switchToggle} heading={"Enter the text to analyze below"}/>}/>
+      <Route path='/about' element={<About  mode={mode}/>}/>
+      <Route path='/login' element={<Login mode={mode} alert={showAlert}/>}/>
+      <Route path='/signup' element={<Signup alert={showAlert} mode= {mode}/>}/>
+      <Route path='/forgotpassword' element={<Forgetpassword mode={mode} alert={showAlert} />}/>
+      <Route path='/services' element={<Services mode={mode}/>}/>
+      <Route path='/contact' element={<Contact mode={mode}/>}/>
+      {/* <Route path='/services' element={<h1>Services page</h1>}/>
+      <Route path='/contact' element={<h1>Contact -Us page</h1>}/> */}
+      <Route path='/*' element={<Navigate to={"/home"}/>}/>
     </Routes>
 
+ {/* remainng fetures is form validation and protectes routes  */}
 
 
-
-
-
-
-
-
-
-
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank" rel='noreferrer'>
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel='noreferrer' >
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + Sonu </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
     </>
   )
 }
