@@ -31,7 +31,7 @@ return (
           </li>
 
           <li className="nav-item">
-           <NavLink className={`navlink nav-link text-${ props.Mode==="dark" ? "light" : "dark" }`} to={"/services"}>Services</NavLink>
+           <NavLink className={`navlink nav-link text-${ props.Mode==="dark" ? "light" : "dark" }`} to={"/"}>Services</NavLink>
           </li>
           <li className="nav-item">
           <NavLink className={`navlink nav-link text-${ props.Mode==="dark" ? "light" : "dark" }  `}  to={"/contact"}>Contact-Us</NavLink>

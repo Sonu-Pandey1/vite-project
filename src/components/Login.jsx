@@ -12,7 +12,7 @@ export default function Login(Props) {
         e.preventDefault()
         console.log(email,password)
         let a = localStorage.getItem("Email")
-        let b = localStorage.getItem("Password")
+        let b = localStorage.getItem("Confirm_Password")
         console.log(a,b)
         let c = JSON.parse(a)
         let d = JSON.parse(b)
