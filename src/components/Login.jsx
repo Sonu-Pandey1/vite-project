@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { useState } from "react"
 export default function Login(Props) {
+    console.log(Props)
     const navigate = useNavigate()
     const[email ,setEmail]=useState("")
     const[password ,setPassword]=useState("")
@@ -12,11 +13,11 @@ export default function Login(Props) {
         e.preventDefault()
         console.log(email,password)
         let a = localStorage.getItem("Email")
-        let b = localStorage.getItem("Confirm_Password")
+        let b = localStorage.getItem("Password")
         console.log(a,b)
         let c = JSON.parse(a)
         let d = JSON.parse(b)
-        console.log(c[0],d[0])
+        // console.log(c[0],d[0])
         if(email == c[0] && password === d[0] ){
             navigate("/home")
             console.log("ok")

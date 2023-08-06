@@ -20,7 +20,7 @@ export default function Protected(Props){
     return(
         <>
         
-          <Props.Component alert={Props.showAlert} mode={Props.mode} toggle={Props.switchToggle} heading={"Enter the text to analyze below"} />
+          <Props.Component alert={Props.alert} mode={Props.mode} toggle={Props.switchToggle} heading={"Enter the text to analyze below"} />
 
         </>
     )

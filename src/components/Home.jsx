@@ -3,12 +3,12 @@ import { useState } from "react";
 import "../App.css"
 
 export default function Home(Props) {
-  // console.log(Props)
+  console.log(Props)
   const [text, setText] = useState("");
 
   function onclickHandller1() {
     setText(text.toUpperCase());
-    Props.alertt("Converted To UpperCase","success")
+    Props.alert("Converted To UpperCase","success")
   }
   function onclickHandller2() {
     setText(text.toLowerCase());

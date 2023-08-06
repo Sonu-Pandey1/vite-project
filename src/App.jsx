@@ -12,14 +12,14 @@ import Services from './components/Services'
 import Contact from './components/Contact'
 import Signup from './components/Signup'
 import Forgetpassword from './components/Forgetpassword'
-import {useSelector,useDispatch} from "react-redux"
-import {IncrementNumber,DecrementNumber} from "./redux/actions/Action"
+// import {useSelector,useDispatch} from "react-redux"
+// import {IncrementNumber,DecrementNumber} from "./redux/actions/Action"
 import Protected from './components/Protected'
 
 
 function App() {
-  let myState = useSelector((state)=>state.changeTheNumber);
-  let dispatch=useDispatch()
+  // let myState = useSelector((state)=>state.changeTheNumber);
+  // let dispatch=useDispatch()
   const [mode, setMode] = useState("light")
   const [alert,setAlert] = useState(null)
 
