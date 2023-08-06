@@ -32,7 +32,7 @@ const valite  = yup.object({
             localStorage.setItem("Email",JSON.stringify(arrEmail))
             localStorage.setItem("Confirm_Password",JSON.stringify(arrPassword))
             let lsi = localStorage.getItem("Confirm_Password")
-            // console.log(lsi)
+            console.log(lsi)
             let lsiv = JSON.parse(lsi)
             console.log(lsiv)
             console.log(a)
@@ -88,7 +88,7 @@ const valite  = yup.object({
                             <form action="/" onSubmit={handleSubmit}>
                                 <input 
                                 // onChange={(e)=>{setEmail(e.target.value)}} 
-                                className={` inp normal-${Props.mode === "dark" ? "bold" : "normal"} text-${Props.mode === "dark" ? "light" : "dark"}`} id="input1" type="email" placeholder="Email" name="email" value={values.email} onChange={handleChange} onBlur={handleBlur}  required  /> <br /><br />
+                                className={` inp normal-${Props.mode === "dark" ? "bold" : "normal"} text-${Props.mode === "dark" ? "light" : "dark"}`} id="input1" type="email" placeholder="Email" name="email" value={values.email} /> <br /><br />
                                 <p>
                                     {errors.email && touched.email ? <span>{errors.email}</span> : null}
                                 </p>
@@ -96,14 +96,14 @@ const valite  = yup.object({
                                 <input 
                                 // onChange={(e)=>{setPassword(e.target.value)}} 
                                 className={` inp normal-${Props.mode === "dark" ? "bold" : "normal"} text-${Props.mode === "dark" ? "light" : "dark"}`} id="input2" type="password" placeholder=" Password" name="password" value={values.password} onChange={handleChange} onBlur={handleBlur}
-                                    required /><br /><br />
+                                     /><br /><br />
                                      <p>
                                     {errors.password && touched.password ? <span>{errors.password}</span> : null}
                                 </p>
                                 <input 
                                 // onChange={(e)=>{setCpassword(e.target.value)}} 
                                 className={` inp normal-${Props.mode === "dark" ? "bold" : "normal"} text-${Props.mode === "dark" ? "light" : "dark"}`} id="input3" type="password" placeholder="Confirm Password" name="confirm_password" value={values.confirm_password} onChange={handleChange} onBlur={handleBlur}
-                                    required /><br /><br />
+                                /><br /><br />
                                      <p>
                                     {errors.confirm_password && touched.confirm_password ? <span>{errors.confirm_password}</span> : null}
                                 </p>
